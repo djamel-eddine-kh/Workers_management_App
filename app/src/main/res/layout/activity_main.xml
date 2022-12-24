@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/action_bar_color"
+    tools:context=".Activities.MainActivity"
+    android:paddingTop="34dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/Theme.app.AppBarOverlay"
+        android:background="@drawable/action_bar_color"
+        app:elevation="0dp">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+                <ImageView
+                    android:id="@+id/app_icone"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_app_icone"
+                    android:adjustViewBounds="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:focusable="true"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/appname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/app_icone"
+                    android:fontFamily="@font/net_nayr"
+                    android:text="@string/workers_management"
+                    android:textColor="#FFCC80"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:ignore="TextContrastCheck" />
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:focusable="true"
+                    android:layoutDirection="rtl"
+                    android:onClick="search"
+                    app:closeIcon="@drawable/ic_close"
+                    app:queryHint="search"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/list_view"
+        android:elevation="10dp"
+        tools:listitem="@layout/workeritem"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical"
+        android:paddingVertical="8dp"
+
+     />
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="add_worker"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="12dp"
+        app:cardUseCompatPadding="false"
+        tools:ignore="SpeakableTextPresentCheck,UsingOnClickInXml">
+
+        <RelativeLayout
+            android:id="@+id/add_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/action_bar_color">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_add"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

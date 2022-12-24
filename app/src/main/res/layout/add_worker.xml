@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="34dp">
+   <!-- -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/container2"
+        app:layout_constraintBottom_toTopOf="@id/container2"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_gravity="center"
+        android:elevation="1dp"
+        android:gravity="center">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:clipToOutline="true"
+            android:padding="10dp"
+            app:shapeAppearanceOverlay="@style/circle"
+            app:srcCompat="@drawable/profile_picture"
+            app:strokeColor="#FFFDE7"
+
+            app:strokeWidth="4dp"
+            tools:ignore="ImageContrastCheck"
+            tools:targetApi="s" />
+
+        <ImageView
+            android:id="@+id/add_picture"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignEnd="@+id/profile"
+            android:layout_alignBottom="@id/profile"
+            android:src="@drawable/ic_photo"
+            app:tint="@color/orange"
+            tools:ignore="ImageContrastCheck"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/list_view"
+        android:gravity="end"
+        android:layout_marginTop="65dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlCompat">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_weight="1"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <EditText
+                android:id="@+id/worker_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:hint="@string/worker_id"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                app:startIconDrawable="@drawable/ic_person"
+                tools:ignore="NestedWeights">
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:inputType="text"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="1"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+                    android:inputType="text"
+                    android:textSize="16sp"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            app:startIconDrawable="@drawable/ic_cake">
+
+            <EditText
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/birthday"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:inputType="date"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            app:startIconDrawable="@drawable/ic_phone">
+
+            <EditText
+                android:id="@+id/phone_numberr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:digits="+0123456789"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="15dp"
+            android:layout_weight="1"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <EditText
+                android:id="@+id/email_adresse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_adresse"
+                android:inputType="textEmailAddress"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            app:startIconDrawable="@drawable/ic_work">
+
+            <EditText
+                android:id="@+id/field_of_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/field_of_work"
+                android:inputType="text"
+                android:textSize="16sp"
+                tools:ignore="SpeakableTextPresentCheck"
+                android:importantForAutofill="no" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rectangle"
+            android:paddingHorizontal="30dp"
+            android:text="@string/confirm"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

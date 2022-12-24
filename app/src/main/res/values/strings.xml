@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">workers Management</string>
+    <string name="confirm">confirm</string>
+    <string name="worker_id">Worker id</string>
+    <string name="phone_number">Phone number</string>
+    <string name="birthday">Birthday</string>
+    <string name="first_name">First name</string>
+    <string name="femme">Femme</string>
+    <string name="homme">Homme</string>
+    <string name="field_of_work">Field of work</string>
+    <string name="email_adresse">Email adresse</string>
+    <string name="blank">%d</string>
+    <string name="workers_management">Workers management</string>
+    <string name="edit_text">Edit Text</string>
+    <string name="last_name">Last Name</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+    <string name="receiver">Receiver</string>
+    <string name="description">Description</string>
+    <string name="subject">subject</string>
+    <string name="call">Call</string>
+    <string name="send_sms">send sms</string>
+    <string name="textview">TextView</string>
+</resources>
